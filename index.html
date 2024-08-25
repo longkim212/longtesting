@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <h1 id="red">Red</h1>
+    <input type="text" id="num1"> <br> <br>
+    <input type="text" id="result" disabled><br> <br>
+    <button onclick="changetored()">click me!</button> 
+
+
+    <img id="light" src="image/turned-off (1).png" alt=""><br>
+    <button id="on" onclick="btnlight()">ON</button>
+    <button id="off" onclick="btnoff()" style="display: none;">OFF</button>
+   
+
+    <script>
+        var red = document.getElementById("red");
+        var num1 = document.getElementById('num1');
+        var num2 = 4100;
+        var result = document.getElementById('result');
+
+        var light = document.getElementById('light');
+        var on = document.getElementById('on');
+        var off = document.getElementById('off');
+
+
+
+       function sumdata (){
+        result.value =  parseInt(num1.value) * num2
+      }   
+      
+      
+      function changetored(){
+        red.style.color = "red";
+      }
+
+      function btnlight(){
+            light.src = "image/turned-on.png";
+            off.style.display = "block";
+            on.style.display = "none";
+      }
+
+      function btnoff(){
+            light.src = "image/turned-off (1).png";
+            off.style.display = "none";
+            on.style.display = "block";
+      }
+    </script>
+</body>
+</html>
